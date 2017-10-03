@@ -8,6 +8,8 @@
 #include <QString>
 #include <QTextEdit>
 #include <QPushButton>
+#include <QLabel>
+
 
 namespace Ui {
 class MedusaToolbox;
@@ -25,6 +27,9 @@ private slots:
     void on_logIn_clicked();
     //void onLoginPressed(QString text);
 
+public slots:
+    void sendStatus();
+
 signals:
     void sendDbInfo(QSqlDatabase db);
 
@@ -39,6 +44,8 @@ private:
 
     QString _userName;
     QString _password;
+
+    QLabel *statusInfo;
 
     bool connectionStatus;
 

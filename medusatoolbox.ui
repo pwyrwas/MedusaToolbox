@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>482</width>
-    <height>295</height>
+    <width>483</width>
+    <height>296</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>482</width>
-    <height>295</height>
+    <width>483</width>
+    <height>296</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -116,6 +116,12 @@
       <string>Login</string>
      </property>
     </widget>
+    <zorder>password</zorder>
+    <zorder>userName</zorder>
+    <zorder>passwordLabel</zorder>
+    <zorder>nameLabel</zorder>
+    <zorder>logIn</zorder>
+    <zorder>statusInfo</zorder>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -139,13 +145,52 @@
      <number>-7</number>
     </property>
    </widget>
+   <widget class="QLabel" name="statusLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Status:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statusInfo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>331</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>482</width>
+     <width>483</width>
      <height>21</height>
     </rect>
    </property>
