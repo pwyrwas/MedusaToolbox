@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,10 +26,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        medusatoolbox.cpp
+        medusatoolbox.cpp \
+    generalwindow.cpp \
+    mainwindow.cpp
 
 HEADERS += \
-        medusatoolbox.h
+        medusatoolbox.h \
+    generalwindow.h \
+    mainwindow.h
 
 FORMS += \
-        medusatoolbox.ui
+        medusatoolbox.ui \
+    generalwindow.ui \
+    mainwindow.ui
+
+DISTFILES += \
+    ../../../Desktop/Tentacool.png
