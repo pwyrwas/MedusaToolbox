@@ -28,17 +28,23 @@ SOURCES += \
         main.cpp \
         medusatoolbox.cpp \
     generalwindow.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    connectionsettings.cpp
 
 HEADERS += \
         medusatoolbox.h \
     generalwindow.h \
-    mainwindow.h
+    mainwindow.h \
+    connectionsettings.h
 
 FORMS += \
         medusatoolbox.ui \
     generalwindow.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    connectionsettings.ui
 
 DISTFILES += \
-    ../../../Desktop/Tentacool.png
+    Tentacool.png
+
+RESOURCES += \
+    additional.qrc

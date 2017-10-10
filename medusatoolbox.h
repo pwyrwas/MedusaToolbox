@@ -2,6 +2,7 @@
 #define MEDUSATOOLBOX_H
 
 #include <generalwindow.h>
+#include <connectionsettings.h>
 #include <mainwindow.h>
 #include <QMainWindow>
 #include <QtSql>
@@ -27,6 +28,8 @@ private slots:
     void on_logIn_clicked();
     //void onLoginPressed(QString text);
 
+    void on_actionconnection_settings_triggered();
+
 public slots:
     void sendStatus();
 
@@ -34,9 +37,10 @@ signals:
     void sendDbInfo(QSqlDatabase db);
 
 private:
-    bool connects(QString username, QString password);
+    //bool connects(QString username, QString password);
     void sendUserName();
 
+    connectionSettings *cs;
     Ui::MedusaToolbox *ui;
     QPushButton *_login;
     QLineEdit *_uName;

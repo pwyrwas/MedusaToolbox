@@ -42,8 +42,8 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>30</y>
+      <x>220</x>
+      <y>10</y>
       <width>241</width>
       <height>181</height>
      </rect>
@@ -116,12 +116,6 @@
       <string>Login</string>
      </property>
     </widget>
-    <zorder>password</zorder>
-    <zorder>userName</zorder>
-    <zorder>passwordLabel</zorder>
-    <zorder>nameLabel</zorder>
-    <zorder>logIn</zorder>
-    <zorder>statusInfo</zorder>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -136,7 +130,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../Desktop/Tentacool.png</pixmap>
+     <pixmap>../build-Medusa_Toolbox-Desktop_Qt_5_7_1_MinGW_32bit-Debug/debug/Tentacool.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -161,7 +155,7 @@
    <widget class="QLabel" name="statusInfo">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>220</y>
       <width>331</width>
       <height>41</height>
@@ -185,16 +179,6 @@
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>483</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -204,6 +188,28 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>483</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuconfiguration">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionconnection_settings"/>
+   </widget>
+   <addaction name="menuconfiguration"/>
+  </widget>
+  <action name="actionconnection_settings">
+   <property name="text">
+    <string>Connection settings</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

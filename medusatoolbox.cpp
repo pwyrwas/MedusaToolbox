@@ -34,14 +34,14 @@ void MedusaToolbox::on_logIn_clicked()
     _userName = _uName->text();
     _password = _pass->text();
 
-    connectionStatus = connects(_userName,_password);
-    if(connectionStatus)
+    //connectionStatus = connects(_userName,_password);
+    if(true) //connection was in this place
     {
 
         const QString hostName = "localhost";
         const QString dbFileName = "C:/database.FDB";
         const QString userName = _userName;//"SYSDBA";
-        const QString password = _password;"orangepl";
+        const QString password = _password;//"orangepl";
 
         QSqlDatabase db = QSqlDatabase::addDatabase("QIBASE","soct");
         if (!db.isValid())
@@ -79,7 +79,7 @@ void MedusaToolbox::on_logIn_clicked()
            emit sendDbInfo(db);
            hide();
        }
-      // qDebug() << "Database last error:" << db.lastError().text();
+       // qDebug() << "Database last error:" << db.lastError().text();
        /*
        QSqlQuery query = QSqlQuery(db);
        QString queryString = "SELECT a.NICKNAME FROM PEOPLE a WHERE a.ID = '1'";
@@ -89,16 +89,22 @@ void MedusaToolbox::on_logIn_clicked()
        QString result = query.value(0).toString();
        qDebug() << "Query result: " << result;
        qDebug() << "query last error:" <<query.lastError().text();
-        */
-
-
+       */
     }
 }
 void MedusaToolbox::sendStatus()
 {
     statusInfo->setText("wait");
 }
-bool MedusaToolbox::connects(QString username, QString password)
+//bool MedusaToolbox::connects(QString username, QString password)
+//{
+//    return true;
+//}
+
+void MedusaToolbox::on_actionconnection_settings_triggered()
 {
-    return true;
+     qDebug()<<"Okno konfiguracji";
+     cs = new connectionSettings(this);
+     cs->show();
+
 }
