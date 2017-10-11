@@ -30,6 +30,8 @@ private:
     QString s_hostName;
     QString s_dbName;
 
+    bool checkConnectSettingFile();
+
 };
 
 #endif // CONNECTIONSETTINGS_H

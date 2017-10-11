@@ -16,7 +16,8 @@ namespace Ui {
 class MedusaToolbox;
 }
 
-class MedusaToolbox : public QMainWindow {
+class MedusaToolbox : public QMainWindow
+{
     Q_OBJECT
 
 public:
@@ -52,6 +53,8 @@ private:
     QLabel *statusInfo;
 
     bool connectionStatus;
+    bool checkConnectSettingFile();
+    bool logInProcces();
 
 
 

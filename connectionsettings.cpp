@@ -2,6 +2,8 @@
 #include "ui_connectionsettings.h"
 #include <QXmlStreamWriter>
 
+#define XMLFILENAME QString("settings.xml")
+
 connectionSettings::connectionSettings(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::connectionSettings)
@@ -23,13 +25,32 @@ void connectionSettings::on_buttonBox_accepted()
 
     qDebug() << "Host name: " << s_hostName << "Database name:" << s_dbName;
 
-    QString filename = "test.xml";
-    QFile file(filename);
-    file.open(QIODevice::WriteOnly);
+    //check if xml file exist.
+    if(checkConnectSettingFile())
+    {
+        qDebug() << "istnieje";
+    }else{
+        qDebug() << "nie istnieje";
 
-        QXmlStreamWriter xmlWriter(&file);
-        xmlWriter.setAutoFormatting(true);
-        xmlWriter.writeStartDocument();
+        QFile file(XMLFILENAME);
+        file.open(QIODevice::WriteOnly);
 
-    xmlWriter.writeStartElement("LAMPS");
+            QXmlStreamWriter xmlWriter(&file);
+            xmlWriter.setAutoFormatting(true);
+            xmlWriter.writeStartDocument();
+
+        xmlWriter.writeStartElement("ConnectionSettings");
+        xmlWriter.writeEndElement();
+    }
+
+
+}
+bool connectionSettings::checkConnectSettingFile()
+{
+    //check if settings.xml are exist
+    QFile file(XMLFILENAME);
+    if(file.exists())
+        return true;
+    else
+        return false;
 }

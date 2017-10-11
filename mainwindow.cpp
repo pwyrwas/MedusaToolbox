@@ -7,6 +7,18 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     logAs = ui->user;
+
+    // qDebug() << "Database last error:" << db.lastError().text();
+    /*
+    QSqlQuery query = QSqlQuery(db);
+    QString queryString = "SELECT a.NICKNAME FROM PEOPLE a WHERE a.ID = '1'";
+    query.prepare(queryString);
+    query.exec();
+    query.next();
+    QString result = query.value(0).toString();
+    qDebug() << "Query result: " << result;
+    qDebug() << "query last error:" <<query.lastError().text();
+    */
 }
 
 MainWindow::~MainWindow()

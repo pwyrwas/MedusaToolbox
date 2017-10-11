@@ -155,8 +155,8 @@
    <widget class="QLabel" name="statusInfo">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>220</y>
+      <x>70</x>
+      <y>200</y>
       <width>331</width>
       <height>41</height>
      </rect>
